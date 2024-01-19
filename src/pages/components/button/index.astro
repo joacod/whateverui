@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Button from "@/components-ui/Button.astro";
+import HomeIcon from "@/icons/Home.astro";
+---
+
+<Layout title="Whatever UI - Button">
+  <h1 class="text-4xl">Button</h1>
+
+  <section class="">
+    <h2>With Icon</h2>
+    <Button href="">
+      <HomeIcon slot="before" />
+      <span>Click Me</span>
+    </Button>
+
+    <h2>Sizes</h2>
+    <div class="flex flex-col gap-2">
+      <Button href="" size="xs">Click Me</Button>
+      <Button href="" size="sm">Click Me</Button>
+      <Button href="" size="base">Click Me</Button>
+      <Button href="" size="lg">Click Me</Button>
+      <Button href="" size="xl">Click Me</Button>
+    </div>
+  </section>
+</Layout>
