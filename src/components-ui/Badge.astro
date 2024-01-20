@@ -1,0 +1,33 @@
+---
+interface Props {
+  type?:
+    | "primary"
+    | "secondary"
+    | "accent"
+    | "neutral"
+    | "success"
+    | "warning"
+    | "error"
+    | "info";
+}
+
+const { type = "neutral" } = Astro.props;
+---
+
+<div
+  class="px-2 py-1 text-sm rounded-2xl w-fit"
+  class:list={[
+    {
+      "bg-primary text-primary-content": type === "primary",
+      "bg-secondary text-secondary-content": type === "secondary",
+      "bg-accent text-accent-content": type === "accent",
+      "bg-neutral text-neutral-content": type === "neutral",
+      "bg-success text-success-content": type === "success",
+      "bg-warning text-warning-content": type === "warning",
+      "bg-error text-error-content": type === "error",
+      "bg-info text-info-content": type === "info",
+    },
+  ]}
+>
+  <slot />
+</div>
