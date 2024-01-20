@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components-ui/Badge.astro";
+---
+
+<Layout title="Colors">
+  <h1 class="text-4xl">Badge</h1>
+
+  <section class="mt-5">
+    <h2>Colors</h2>
+    <div class="flex flex-col gap-2">
+      <Badge type="primary">primary</Badge>
+      <Badge type="secondary">secondary</Badge>
+      <Badge type="accent">success</Badge>
+    </div>
+
+    <h2>Status</h2>
+    <div class="flex flex-col gap-2">
+      <Badge type="success">success</Badge>
+      <Badge type="warning">warning</Badge>
+      <Badge type="error">error</Badge>
+      <Badge type="info">info</Badge>
+    </div>
+  </section>
+</Layout>
