@@ -1,11 +1,55 @@
 ---
 interface Props {
+  left?: string;
+  right?: string;
   type?: "primary" | "secondary" | "accent" | "neutral";
+  size?: "xs" | "sm" | "base" | "lg" | "xl";
+  checked?: boolean;
 }
 
-const { type = "neutral" } = Astro.props;
+const {
+  left = "Off",
+  right = "On",
+  type = "neutral",
+  size = "base",
+  checked = false,
+} = Astro.props;
 ---
 
-<div>
-  <slot />
-</div>
+<label
+  class="inline-flex items-center p-1 rounded cursor-pointer select-none w-fit bg-neutral-content text-neutral"
+  class:list={[
+    { "text-xs": size === "xs" },
+    { "text-sm": size === "sm" },
+    { "text-base": size === "base" },
+    { "text-lg": size === "lg" },
+    { "text-xl": size === "xl" },
+  ]}
+>
+  <input type="checkbox" class="hidden peer" checked={checked} />
+  <span
+    class="px-2 py-1 rounded bg-neutral text-neutral-content peer-checked:bg-neutral-content peer-checked:text-neutral"
+    >{left}</span
+  >
+  <span
+    class="px-2 py-1 rounded bg-neutral-content text-neutral"
+    class:list={[
+      {
+        "peer-checked:bg-primary peer-checked:text-primary-content":
+          type === "primary",
+      },
+      {
+        "peer-checked:bg-secondary peer-checked:text-secondary-content":
+          type === "secondary",
+      },
+      {
+        "peer-checked:bg-accent peer-checked:text-accent-content":
+          type === "accent",
+      },
+      {
+        "peer-checked:bg-neutral peer-checked:text-neutral-content":
+          type === "neutral",
+      },
+    ]}>{right}</span
+  >
+</label>

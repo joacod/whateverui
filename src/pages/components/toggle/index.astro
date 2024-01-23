@@ -11,14 +11,22 @@ import Subtitle from "@/components-ui/Subtitle.astro";
   <section class="mt-5">
     <Subtitle>Colors</Subtitle>
     <div class="flex flex-col gap-2">
-      <Toggle type="primary">primary</Toggle>
-      <Toggle type="secondary">secondary</Toggle>
-      <Toggle type="accent">accent</Toggle>
-      <Toggle type="neutral">neutral</Toggle>
+      <Toggle type="primary" checked={true} right="Primary" />
+      <Toggle type="secondary" checked={true} right="Secondary" />
+      <Toggle type="accent" checked={true} right="Accent" />
+      <Toggle type="neutral" checked={true} right="Neutral" />
     </div>
 
     <Subtitle>Sizes</Subtitle>
+    <div class="flex flex-col gap-2">
+      <Toggle size="xs" />
+      <Toggle size="sm" />
+      <Toggle size="base" />
+      <Toggle size="lg" />
+      <Toggle size="xl" />
+    </div>
 
     <Subtitle>With Icon</Subtitle>
+    <p>In progress...</p>
   </section>
 </Layout>
