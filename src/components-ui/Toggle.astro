@@ -1,0 +1,11 @@
+---
+interface Props {
+  type?: "primary" | "secondary" | "accent" | "neutral";
+}
+
+const { type = "neutral" } = Astro.props;
+---
+
+<div>
+  <slot />
+</div>
