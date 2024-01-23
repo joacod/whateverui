@@ -12,7 +12,7 @@ const { href, target, type = "neutral", size = "base" } = Astro.props;
 <a
   href={href}
   target={target}
-  class="flex items-center justify-center px-4 py-2 space-x-1 rounded w-fit"
+  class="flex items-center justify-center px-4 py-2 space-x-1 rounded cursor-pointer select-none w-fit"
   class:list={[
     {
       "bg-primary text-primary-content hover:bg-primary-focus active:bg-primary-active":

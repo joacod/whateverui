@@ -8,7 +8,7 @@ const { type } = Astro.props;
 
 <article class="flex items-center gap-3 mt-5">
   <div
-    class="flex items-center justify-center border-2 rounded-full w-28 h-28"
+    class="flex items-center justify-center font-bold border-2 rounded-full cursor-pointer w-28 h-28"
     class:list={[
       {
         "bg-primary text-primary-content border-primary-content hover:bg-primary-focus active:bg-primary-active":
@@ -22,7 +22,7 @@ const { type } = Astro.props;
       },
     ]}
   >
-    <p>{type}</p>
+    <p class="select-none">{type}</p>
   </div>
 
   <div>

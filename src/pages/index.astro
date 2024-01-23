@@ -1,9 +1,41 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Title from "@/components-ui/Title.astro";
+import HtmlIcon from "@/icons/Html.astro";
+import TailwindIcon from "@/icons/Tailwind.astro";
 ---
 
 <Layout title="Home">
   <Title>Introduction</Title>
-  <p>Welcome to Whatever UI!</p>
+
+  <p class="text-lg text-pretty">
+    Welcome to <strong>Whatever UI</strong>, your go-to resource for web design
+    with HTML and Tailwind CSS!
+  </p>
+  <section class="flex justify-around mt-5 text-primary">
+    <HtmlIcon />
+    <TailwindIcon />
+  </section>
+  <section class="flex gap-5 mt-5">
+    <p class="text-pretty">
+      This site is a collection of UI components and patterns that you can use
+      in your own projects. It's also a great place to learn about Tailwind and
+      how to create an effective theme for your site.
+    </p>
+    <p class="text-pretty">
+      Not only do we showcase colors and fonts and how to use them, but we go a
+      step further by offering a collection of HTML + Tailwind CSS components.
+      These ready-to-use snippets can be effortlessly copied and pasted into
+      your projects, saving you valuable time and effort.
+    </p>
+  </section>
+
+  <p class="mt-10 text-pretty">
+    But that's not all. We understand the importance of customization and
+    individual expression. That's why we've included a comprehensive guide on
+    theming with Tailwind CSS. Simply grab our tailored <strong
+      >tailwind.config.js</strong
+    > file, and with a few tweaks, transform the look and feel of your site to match
+    your unique style.
+  </p>
 </Layout>

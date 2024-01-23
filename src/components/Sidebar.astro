@@ -1,26 +1,56 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
 <aside
-  class="sticky top-0 h-screen px-6 py-3 border-r border-opacity-40 min-w-fit bg-neutral border-neutral-focus text-neutral-content"
+  class="sticky top-0 h-screen px-4 py-3 border-r border-opacity-40 min-w-fit bg-neutral border-neutral-focus text-neutral-content opacity-90"
 >
   <header
-    class="flex items-center justify-center p-2 mb-10 border border-opacity-60 rounded-xl border-neutral-focus"
+    class="flex items-center justify-center px-3 py-2 mb-10 bg-[#02091c] border border-opacity-60 rounded-xl border-neutral-focus"
   >
     <img src="../../whateverui.png" width="40" height="40" />
     <h1 class="ml-3 text-lg font-extrabold font-display">Whatever UI</h1>
   </header>
-  <nav class="space-y-8 text-sm">
+  <nav class="px-1 space-y-8 text-sm">
     <div class="space-y-2">
-      <h2 class="text-sm font-semibold uppercase">Design</h2>
-      <ul class="flex flex-col space-y-1">
-        <li><a href="/design/colors">Colors</a></li>
-        <li><a href="/design/fonts">Fonts</a></li>
+      <h2 class="text-lg font-bold uppercase font-display">Design</h2>
+      <ul class="flex flex-col space-y-1 text-base">
+        <li>
+          <a
+            class={currentPath === "design/colors" ? "text-primary" : ""}
+            href="/design/colors">Colors</a
+          >
+        </li>
+        <li>
+          <a
+            class={currentPath === "design/fonts" ? "text-primary" : ""}
+            href="/design/fonts">Fonts</a
+          >
+        </li>
       </ul>
     </div>
     <div class="space-y-2">
-      <h2 class="text-sm font-semibold uppercase">Components</h2>
-      <ul class="flex flex-col space-y-1">
-        <li><a href="/components/badge">Badge</a></li>
-        <li><a href="/components/button">Button</a></li>
-        <li><a href="/components/toggle">Toggle</a></li>
+      <h2 class="text-lg font-bold uppercase font-display">Components</h2>
+      <ul class="flex flex-col space-y-1 text-base">
+        <li>
+          <a
+            class={currentPath === "components/badge" ? "text-primary" : ""}
+            href="/components/badge">Badge</a
+          >
+        </li>
+        <li>
+          <a
+            class={currentPath === "components/button" ? "text-primary" : ""}
+            href="/components/button">Button</a
+          >
+        </li>
+        <li>
+          <a
+            class={currentPath === "components/toggle" ? "text-primary" : ""}
+            href="/components/toggle">Toggle</a
+          >
+        </li>
       </ul>
     </div>
   </nav>
