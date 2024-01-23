@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Comfortaa Variable", "sans-serif"],
+        body: ["Exo Variable", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: "#687EFF",
         "primary-content": "#fff",

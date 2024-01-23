@@ -4,20 +4,21 @@ import Button from "@/components-ui/Button.astro";
 import HomeIcon from "@/icons/Home.astro";
 import PlusIcon from "@/icons/Plus.astro";
 import Title from "@/components-ui/Title.astro";
+import Subtitle from "@/components-ui/Subtitle.astro";
 ---
 
 <Layout title="Button">
   <Title>Button</Title>
 
   <section class="mt-5">
-    <h2>Colors</h2>
+    <Subtitle>Colors</Subtitle>
     <div class="flex flex-col gap-2">
       <Button href="" type="primary">Click Me</Button>
       <Button href="" type="secondary">Click Me</Button>
       <Button href="" type="accent">Click Me</Button>
     </div>
 
-    <h2>Sizes</h2>
+    <Subtitle>Sizes</Subtitle>
     <div class="flex flex-col gap-2 p-3 rounded bg-neutral-content w-fit">
       <Button href="" size="xs">Click Me</Button>
       <Button href="" size="sm">Click Me</Button>
@@ -26,7 +27,7 @@ import Title from "@/components-ui/Title.astro";
       <Button href="" size="xl">Click Me</Button>
     </div>
 
-    <h2>With Icon</h2>
+    <Subtitle>With Icon</Subtitle>
     <div class="flex flex-col gap-2 p-3 rounded bg-neutral-content w-fit">
       <Button href="">
         <HomeIcon slot="before" />

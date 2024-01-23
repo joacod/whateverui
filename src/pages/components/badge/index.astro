@@ -2,20 +2,22 @@
 import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components-ui/Badge.astro";
 import Title from "@/components-ui/Title.astro";
+import Subtitle from "@/components-ui/Subtitle.astro";
 ---
 
 <Layout title="Badge">
   <Title>Badge</Title>
 
   <section class="mt-5">
-    <h2>Colors</h2>
+    <Subtitle>Colors</Subtitle>
     <div class="flex flex-col gap-2">
       <Badge type="primary">primary</Badge>
       <Badge type="secondary">secondary</Badge>
       <Badge type="accent">accent</Badge>
+      <Badge type="neutral">neutral</Badge>
     </div>
 
-    <h2>Status</h2>
+    <Subtitle>Status</Subtitle>
     <div class="flex flex-col gap-2">
       <Badge type="success">success</Badge>
       <Badge type="warning">warning</Badge>

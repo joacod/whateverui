@@ -3,20 +3,21 @@ import Layout from "@/layouts/Layout.astro";
 import BrandColorCard from "@/components/ColorCard/BrandColorCard.astro";
 import StatusColorCard from "@/components/ColorCard/StatusColorCard.astro";
 import Title from "@/components-ui/Title.astro";
+import Subtitle from "@/components-ui/Subtitle.astro";
 ---
 
 <Layout title="Colors">
   <Title>Colors</Title>
 
-  <h2 class="mt-5 text-2xl">Brand</h2>
-  <section class="flex gap-10">
+  <Subtitle>Brand</Subtitle>
+  <section class="flex gap-10 mb-10">
     <BrandColorCard type="primary" />
     <BrandColorCard type="secondary" />
     <BrandColorCard type="accent" />
     <BrandColorCard type="neutral" />
   </section>
 
-  <h2 class="mt-5 text-2xl">Status</h2>
+  <Subtitle>Status</Subtitle>
   <section class="flex gap-10">
     <StatusColorCard type="success" />
     <StatusColorCard type="warning" />
