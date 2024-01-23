@@ -1,0 +1,74 @@
+---
+interface Props {
+  type: "primary" | "secondary" | "accent" | "neutral";
+}
+
+const { type } = Astro.props;
+---
+
+<article class="flex items-center gap-3 mt-5">
+  <div
+    class="flex items-center justify-center border-2 rounded-full w-28 h-28"
+    class:list={[
+      {
+        "bg-primary text-primary-content border-primary-content hover:bg-primary-focus active:bg-primary-active":
+          type === "primary",
+        "bg-secondary text-secondary-content border-secondary-content hover:bg-secondary-focus active:bg-secondary-active":
+          type === "secondary",
+        "bg-accent text-accent-content border-accent-content hover:bg-accent-focus active:bg-accent-active":
+          type === "accent",
+        "bg-neutral text-neutral-content border-neutral-content hover:bg-neutral-focus active:bg-neutral-active":
+          type === "neutral",
+      },
+    ]}
+  >
+    <p>{type}</p>
+  </div>
+
+  <div>
+    <p
+      class="px-1 rounded"
+      class:list={[
+        { "text-primary": type === "primary" },
+        { "text-secondary": type === "secondary" },
+        { "text-accent": type === "accent" },
+        { "text-neutral bg-neutral-content": type === "neutral" },
+      ]}
+    >
+      {type}
+    </p>
+    <p
+      class="px-1 rounded w-fit"
+      class:list={[
+        { "bg-primary text-primary-content": type === "primary" },
+        { "bg-secondary text-secondary-content": type === "secondary" },
+        { "bg-accent text-accent-content": type === "accent" },
+        { "bg-neutral text-neutral-content": type === "neutral" },
+      ]}
+    >
+      {type}-content
+    </p>
+    <p
+      class="px-1 rounded"
+      class:list={[
+        { "text-primary-focus": type === "primary" },
+        { "text-secondary-focus": type === "secondary" },
+        { "text-accent-focus": type === "accent" },
+        { "text-neutral-focus": type === "neutral" },
+      ]}
+    >
+      {type}-focus
+    </p>
+    <p
+      class="px-1 rounded"
+      class:list={[
+        { "text-primary-active": type === "primary" },
+        { "text-secondary-active": type === "secondary" },
+        { "text-accent-active": type === "accent" },
+        { "text-neutral-active": type === "neutral" },
+      ]}
+    >
+      {type}-active
+    </p>
+  </div>
+</article>
