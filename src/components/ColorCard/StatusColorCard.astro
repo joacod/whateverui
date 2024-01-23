@@ -1,0 +1,50 @@
+---
+interface Props {
+  type: "success" | "warning" | "error" | "info";
+}
+
+const { type } = Astro.props;
+---
+
+<article class="flex items-center gap-3 mt-5">
+  <div
+    class="flex items-center justify-center w-24 h-24 border-2 rounded-lg"
+    class:list={[
+      {
+        "bg-success text-success-content border-success-content":
+          type === "success",
+        "bg-warning text-warning-content border-warning-content":
+          type === "warning",
+        "bg-error text-error-content border-error-content": type === "error",
+        "bg-info text-info-content border-info-content": type === "info",
+      },
+    ]}
+  >
+    <p>{type}</p>
+  </div>
+
+  <div>
+    <p
+      class="px-1 rounded"
+      class:list={[
+        { "text-success": type === "success" },
+        { "text-warning": type === "warning" },
+        { "text-error": type === "error" },
+        { "text-info": type === "info" },
+      ]}
+    >
+      {type}
+    </p>
+    <p
+      class="px-1 rounded w-fit"
+      class:list={[
+        { "bg-success text-success-content": type === "success" },
+        { "bg-warning text-warning-content": type === "warning" },
+        { "bg-error text-error-content": type === "error" },
+        { "bg-info text-info-content": type === "info" },
+      ]}
+    >
+      {type}-content
+    </p>
+  </div>
+</article>

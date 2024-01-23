@@ -1,48 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import BrandColorCard from "@/components/ColorCard/BrandColorCard.astro";
+import StatusColorCard from "@/components/ColorCard/StatusColorCard.astro";
+import Title from "@/components-ui/Title.astro";
 ---
 
 <Layout title="Colors">
-  <h1 class="text-4xl">Colors</h1>
+  <Title>Colors</Title>
 
-  <section class="flex gap-10 mt-5">
-    <div>
-      <p class="text-primary">primary</p>
-      <p class="bg-primary text-primary-content w-fit">primary-content</p>
-      <p class="text-primary-focus">primary-focus</p>
-      <p class="text-primary-active">primary-active</p>
-    </div>
-
-    <div>
-      <p class="text-secondary">secondary</p>
-      <p class="bg-secondary text-secondary-content w-fit">secondary-content</p>
-      <p class="text-secondary-focus">secondary-focus</p>
-      <p class="text-secondary-active">secondary-active</p>
-    </div>
-
-    <div>
-      <p class="text-accent">accent</p>
-      <p class="bg-accent text-accent-content w-fit">accent-content</p>
-      <p class="text-accent-focus">accent-focus</p>
-      <p class="text-accent-active">accent-active</p>
-    </div>
-
-    <div>
-      <p class="text-neutral bg-neutral-content w-fit">neutral</p>
-      <p class="text-neutral-content">neutral-content</p>
-      <p class="text-neutral-focus">neutral-focus</p>
-      <p class="text-neutral-active">neutral-active</p>
-    </div>
+  <h2 class="mt-5 text-2xl">Brand</h2>
+  <section class="flex gap-10">
+    <BrandColorCard type="primary" />
+    <BrandColorCard type="secondary" />
+    <BrandColorCard type="accent" />
+    <BrandColorCard type="neutral" />
   </section>
 
-  <section class="mt-5">
-    <p class="text-success">success</p>
-    <p class="bg-success text-success-content w-fit">success-content</p>
-    <p class="text-warning">warning</p>
-    <p class="bg-warning text-warning-content w-fit">warning-content</p>
-    <p class="text-error">error</p>
-    <p class="bg-error text-error-content w-fit">error-content</p>
-    <p class="text-info">info</p>
-    <p class="bg-info text-info-content w-fit">info-content</p>
+  <h2 class="mt-5 text-2xl">Status</h2>
+  <section class="flex gap-10">
+    <StatusColorCard type="success" />
+    <StatusColorCard type="warning" />
+    <StatusColorCard type="error" />
+    <StatusColorCard type="info" />
   </section>
 </Layout>
